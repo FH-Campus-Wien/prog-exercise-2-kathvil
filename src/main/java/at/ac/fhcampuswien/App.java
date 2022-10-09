@@ -28,7 +28,7 @@ public class App
 
             if (num <= 0)
             {
-                System.out.println("The largest number is " + String.format(Locale.ENGLISH, "%.2f", largest) + System.lineSeparator());
+                System.out.print("The largest number is " + String.format(Locale.ENGLISH, "%.2f", largest) + System.lineSeparator());
                 break;
             }
 
@@ -45,7 +45,13 @@ public class App
     {
         // input your solution here
         Scanner scan = new Scanner(System.in);
+        System.out.print("n: ");
         int ROWS = scan.nextInt();
+
+        if (ROWS <= 0) {
+            System.out.print("Invalid number!" + System.lineSeparator());
+        }
+
         int counter = 1;
 
         for (int i = 1; i <= ROWS; i++)
